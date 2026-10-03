@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage('code') {
+            steps {
+                git branch: 'main', url: 'https://github.com/lahari-aluvala9/Task.git'            }
+        }
+        stage ("dockerimagebuild") {
+            steps {
+                sh 'docker build -t firstimage:v1 .'
+            }
+        }
+        stage ("dockercontainercreation") {
+            steps {
+                sh 'docker run -d --name cont3 -p 1113:80 firstimage:v1'
+            }
+        }
+    }
+}
