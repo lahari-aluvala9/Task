@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Movie Ticket Booking</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+header{
+    background:linear-gradient(90deg,#e50914,#ff4d4d);
+    padding:20px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:18px;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+.hero{
+    height:80vh;
+    background:url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    background:rgba(0,0,0,0.7);
+    padding:40px;
+    border-radius:15px;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.btn{
+    background:#e50914;
+    color:white;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#ff2e2e;
+    transform:scale(1.05);
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin:50px 0 25px;
+}
+
+.movies{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    padding:20px 50px 50px;
+}
+
+.card{
+    background:#1e293b;
+    border-radius:15px;
+    overflow:hidden;
+    transition:0.4s;
+    box-shadow:0 0 15px rgba(255,255,255,0.1);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#cbd5e1;
+    margin-bottom:15px;
+}
+
+.book-btn{
+    width:100%;
+    padding:12px;
+    background:#f59e0b;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.book-btn:hover{
+    background:#ffb52e;
+}
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+.search-box{
+    text-align:center;
+    padding:30px;
+}
+
+.search-box input{
+    width:60%;
+    max-width:600px;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    font-size:16px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">🎬 MovieZone</div>
+
+    <nav>
+        #Home</a>
+        #Movies</a>
+        #Theatres</a>
+        #Offers</a>
+        #Login</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Book Movie Tickets Online</h1>
+        <p>Get the best seats for the latest blockbuster movies.</p>
+        <button class="btn">Book Now</button>
+    </div>
+</section>
+
+<div class="search-box">
+    <input type="text" placeholder="🔍 Search Movies...">
+</div>
+
+<h2 class="section-title">Now Showing</h2>
+
+<section class="movies">
+
+    <div class="card">
+        https://picsum.photos/300/450?random=1
+        <div class="card-content">
+            <h3>Avengers Endgame</h3>
+            <p>Action | Adventure | Sci-Fi</p>
+            <button class="book-btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div class="card">
+        https://picsum.photos/300/450?random=2
+        <div class="card-content">
+            <h3>Interstellar</h3>
+            <p>Sci-Fi | Thriller</p>
+            <button class="book-btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div class="card">
+        https://picsum.photos/300/450?random=3
+        <div class="card-content">
+            <h3>Joker</h3>
+            <p>Crime | Drama</p>
+            <button class="book-btn">Book Ticket</button>
+        </div>
+    </div>
+
+    <div class="card">
+        https://picsum.photos/300/450?random=4
+        <div class="card-content">
+            <h3>Avatar</h3>
+            <p>Adventure | Fantasy</p>
+            <button class="book-btn">Book Ticket</button>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 MovieZone | Book Your Favorite Movies Anytime</p>
+</footer>
+
+</body>
+</html>
